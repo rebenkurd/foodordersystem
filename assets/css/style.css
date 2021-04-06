@@ -1,0 +1,417 @@
+@font-face {
+  font-family: "DroidKufi-Regular";
+  src: url("../fonts/DroidKufi-Regular/DroidKufi-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/DroidKufi-Regular/DroidKufi-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/DroidKufi-Regular/DroidKufi-Regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../fonts/DroidKufi-Regular/DroidKufi-Regular.woff") format("woff");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  height: 1px;
+  background-color: var(--main-bg-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-bg-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+
+.overlay-scrollbar::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+  display: block;
+}
+
+.overlay-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10rem;
+  border: 1px solid var(--main-bg-color);
+}
+
+.overlay-scrollbar::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+}
+
+.overlay-scrollbar::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+}
+
+:root {
+  --primary-color: #007bff;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+
+  --light-color: #0984e3;
+  --light-second-color: #74b9ff;
+  --light-background: #F7F7F7;
+  --light-second-background: #F0F0F0;
+
+
+  --dark-color: #0984e3;
+  --dark-second-color: #74b9ff;
+  --dark-background: #242526;
+  --dark-second-background: #3a3b3c;
+
+
+
+  --light-theard-color: #ccc;
+  --light-theard-background: #ccc;
+  --dark-theard-color: #111;
+  --dark-theard-background: #111;
+
+}
+
+.light {
+  --main-bg-color: var(--light-background);
+  --second-bg-color: var(--light-second-background);
+
+  --theard-bg-color: var(--light-theard-background);
+  --main-color: var(--light-color);
+  --second-color: var(--light-second-color);
+
+  --theard-color: var(--light-theard-color);
+
+}
+
+.dark {
+  --main-bg-color: var(--dark-background);
+  --second-bg-color: var(--dark-second-background);
+  --theard-bg-color: var(--dark-theard-background);
+  --main-color: var(--dark-color);
+  --second-color: var(--dark-second-color);
+  --theard-color: var(--dark-theard-color);
+}
+
+
+body {
+  direction: rtl;
+  font-family: "DroidKufi-Regular", "Helvetica";
+  font-size: 1rem;
+  background-color: var(--main-bg-color);
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DroidKufi-Regular", "Helvetica", sans-serif;
+  font-weight: 700;
+}
+
+header.masthead {
+  position: relative;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-image: linear-gradient(-20deg, var(--main-bg-color) 10%, var(--main-color) 50%);
+}
+
+header.masthead .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+.btn-search {
+  background-color: #f5f6fa;
+  color: var(--main-color);
+}
+
+.btn-search:hover {
+  color: var(--second-color);
+}
+
+.btn-order {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.btn-order:hover {
+  background-color: var(--second-color);
+  color: #fff;
+}
+
+.navbar-collapse{
+  text-align: center;
+}
+.navbar-collapse .nav-link{
+  margin: 0;
+}
+
+
+
+.banner {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.navbar {
+  background-color: var(--main-bg-color);
+}
+
+.nav-link {
+  position: relative;
+  margin: 0 1rem;
+  color: var(--main-color);
+  transition: .3s;
+}
+
+.nav-link::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .5s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.form {
+  background-color: var(--second-bg-color);
+  border-radius: 10px;
+}
+
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+
+footer.footer {
+  padding: 4rem 0;
+  background-color: var(--second-bg-color);
+}
+
+.list-inline-item a i {
+  color: var(--main-color);
+  transition: .3s;
+}
+
+.copyright h5 {
+  color: var(--main-color);
+}
+
+.copyright p {
+  color: var(--second-color);
+}
+
+.list-inline-item a i:hover {
+  color: var(--second-color);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 10%;
+  right: 45%;
+}
+
+.row a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.clearfix {
+  clear: both;
+  float: none;
+}
+
+
+.img-responsive {
+  width: 100%;
+}
+
+.img-curve {
+  border-radius: 15px;
+}
+
+.food-menu-box {
+  width: 45%;
+  margin: 1%;
+  padding: 2%;
+  float: right;
+  background-color: var(--second-bg-color);
+  border-radius: 15px;
+  color: var(--main-color);
+}
+
+.food-menu-img {
+  width: 20%;
+  float: right;
+}
+
+.food-menu-desc {
+  width: 70%;
+  float: right;
+  margin-right: 8%;
+  text-align: right;
+}
+
+.food-price {
+  font-size: 1.2rem;
+  margin: 2% 0;
+}
+
+.food-detail {
+  font-size: 1rem;
+  color: #747d8c;
+}
+
+.btn-send {
+  background-color: var(--main-color);
+  transition: .3s;
+  color: #fff;
+  width: 50%;
+}
+
+.btn-send:hover {
+  background-color: var(--second-color);
+}
+
+.list-inline-item a {
+  color: #212529;
+}
+
+.form fieldset {
+  color: var(--main-color);
+}
+
+
+/* CSS for Mobile Size or Smaller Screen */
+@media only screen and (max-width: 768px) {
+
+  h4 {
+    font-size: 13px;
+  }
+
+  .food-menu-box {
+    width: 100%;
+    padding: 1%;
+    margin-bottom: 5%;
+  }
+
+  .food-menu-desc h4 {
+    font-size: 14px;
+  }
+
+  .food-menu-desc p {
+    font-size: 10px;
+  }
+
+  .food-menu-desc a {
+    font-size: 10px;
+  }
+
+}
+
+.theme-mode input[type="checkbox"] {
+  position: relative;
+  margin: 15px 25px;
+  width: 50px;
+  height: 25px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: .5s;
+}
+
+.theme-mode input:checked[type="checkbox"] {
+  background-color: var(--main-color);
+}
+
+.theme-mode input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: .5s;
+}
+
+.theme-mode input:checked[type="checkbox"]::before {
+  left: 25px;
+  background-color: #fff;
+}

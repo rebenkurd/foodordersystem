@@ -1,0 +1,365 @@
+@font-face {
+    font-family: "DroidKufi-Regular";
+    src: url("../fonts/DroidKufi-Regular/DroidKufi-Regular.eot");
+    /* IE9 Compat Modes */
+    src: url("../fonts/DroidKufi-Regular/DroidKufi-Regular.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */
+        url("../fonts/DroidKufi-Regular/DroidKufi-Regular.ttf") format("truetype"),
+        /* Safari, Android, iOS */
+        url("../fonts/DroidKufi-Regular/DroidKufi-Regular.woff") format("woff");
+    /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    direction: rtl;
+    font-family: "DroidKufi-Regular", "Helvetica";
+    overflow: hidden;
+    background-color: var(--main-bg-color);
+}
+
+* {
+    font-family: "DroidKufi-Regular";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --white-color: #fff;
+    --primary-color: #007bff;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --primary-color-hover: #3498db;
+    --success-color-hover: #2ecc71;
+    --danger-color-hover: #ec4a5a;
+    --warning-color-hover: #fed330;
+    --alert-primary: #cce5ff;
+    --alert-success: #d4edda;
+    --alert-danger: #f8d7da;
+    --alert-warning: #fff3cd;
+
+    --light-color: #0984e3;
+    --light-second-color: #74b9ff;
+    --light-background: #F7F7F7;
+    --light-second-background: #F0F0F0;
+
+
+    --dark-color: #0984e3;
+    --dark-second-color: #74b9ff;
+    --dark-background: #242526;
+    --dark-second-background: #3a3b3c;
+
+
+
+    --light-theard-color: #ccc;
+    --light-theard-background: #ccc;
+    --dark-theard-color: #1a1a1b;
+    --dark-theard-background: #1a1a1b;
+
+}
+
+.light {
+    --main-bg-color: var(--light-background);
+    --second-bg-color: var(--light-second-background);
+
+    --theard-bg-color: var(--light-theard-background);
+    --main-color: var(--light-color);
+    --second-color: var(--light-second-color);
+
+    --theard-color: var(--light-theard-color);
+
+}
+
+.dark {
+    --main-bg-color: var(--dark-background);
+    --second-bg-color: var(--dark-second-background);
+    --theard-bg-color: var(--dark-theard-background);
+    --main-color: var(--dark-color);
+    --second-color: var(--dark-second-color);
+    --theard-color: var(--dark-theard-color);
+}
+
+.alert-primary {
+    background-color: var(--alert-primary);
+    color: #0c5460;
+    border-color: #bee5eb;
+}
+
+.alert-danger {
+    background-color: var(--alert-danger);
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+.alert-success {
+    background-color: var(--alert-success);
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.alert-warning {
+    background-color: var(--alert-warning);
+    color: #856404;
+    border-color: #ffeeba;
+}
+
+.alert {
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    position: relative;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7rem;
+    padding: 0 2rem;
+}
+
+.div {
+    position: relative;
+}
+
+.img {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.login-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.img img {
+    width: 500px;
+}
+
+form {
+    width: 360px;
+}
+
+.login-content img {
+    height: 100px;
+}
+
+.login-content h2 {
+    margin: 15px 0;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 2.9rem;
+}
+
+.login-content .input-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid var(--theard-bg-color);
+}
+
+.login-content .input-div.one {
+    margin-top: 0;
+}
+
+.i {
+    color: var(--theard-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i i {
+    transition: .3s;
+}
+
+.show {
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+.show i {
+    font-size: 18px;
+    color: var(--theard-bg-color);
+    cursor: pointer;
+}
+
+
+.input-div.focus>.div>.show>i {
+    color: var(--main-color);
+}
+
+.hide {
+    position: absolute;
+    top: 10px;
+    display: none;
+    left: 0;
+}
+
+.hide i {
+    font-size: 18px;
+    color: #999;
+    cursor: pointer;
+}
+
+
+.input-div.focus>.div>.hide>i {
+    color: var(--main-color);
+}
+
+.input-div>div {
+    position: relative;
+    height: 45px;
+}
+
+.input-div>div>h5 {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--theard-bg-color);
+    font-size: 15px;
+    transition: .3s;
+}
+
+.input-div:before,
+.input-div:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: .4s;
+
+}
+
+.input-div:before {
+    right: 50%;
+}
+
+.input-div:after {
+    left: 50%;
+}
+
+.input-div.focus:before,
+.input-div.focus:after {
+    width: 50%;
+}
+
+.input-div.focus>div>h5 {
+    top: -5px;
+    font-size: 12px;
+}
+
+.input-div.focus>.i>i {
+    color: var(--main-color);
+}
+
+.input-div>div>input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: var(--theard-bg-color);
+    text-align: right;
+}
+
+.input-div.pass {
+    margin-bottom: 4px;
+}
+
+a {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+
+a:hover {
+    color: var(--theard-color);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color: var(--main-color);
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.664);
+}
+
+.btn:disabled {
+    background: transparent;
+    color: var(--theard-bg-color);
+    border: 1px solid var(--theard-bg-color);
+    box-shadow: 0 0 0;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .container {
+        grid-gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    form {
+        width: 290px;
+    }
+
+    .login-content h2 {
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+
+    .img img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .login-content {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,429 @@
+/*Css for ALL */
+
+@font-face {
+  font-family: "DroidKufi-Regular";
+  src: url("../fonts/DroidKufi-Regular/DroidKufi-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/DroidKufi-Regular/DroidKufi-Regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/DroidKufi-Regular/DroidKufi-Regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../fonts/DroidKufi-Regular/DroidKufi-Regular.woff") format("woff");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --main-color: #7d5fff;
+  --second-color: #7158e2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DroidKufi-Regular", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1%;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.img-curve {
+  border-radius: 15px;
+}
+
+.text-title {
+  color: var(--second-color);
+}
+
+.text-right {
+  text-align: right;
+}
+
+.left-line,
+.right-line {
+  width: 40%;
+  border-top: 3px dotted var(--main-color);
+  height: 1px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.clearfix {
+  clear: both;
+  float: none;
+}
+
+a {
+  color: var(--main-color);
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--second-color);
+}
+
+.btn {
+  padding: 1.5%;
+  border: none;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-secondary {
+  background-color: var(--second-color);
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  color: #fff;
+  box-shadow: 0 0 5px var(--second-color);
+  background-color: var(--second-color);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.float-container {
+  position: relative;
+}
+
+.float-text {
+  position: absolute;
+  bottom: 50px;
+  left: 40%;
+}
+
+fieldset {
+  border: 1px solid #fff;
+  margin: 1%;
+  padding: 3%;
+  border-radius: 5px;
+}
+
+/* CSSS for navbar section */
+
+.logo {
+  width: 10%;
+  float: left;
+}
+
+.menu {
+  line-height: 60px;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  display: inline;
+  padding: 1%;
+  font-weight: bold;
+}
+
+.btn-toggle-open {
+  display: none;
+}
+
+.btn-toggle-open button {
+  width: 40px;
+  background: var(--main-color);
+  border: none;
+  padding: 5px 0 0;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-toggle-open button i {
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+.btn-toggle-close {
+  display: none;
+}
+
+.btn-toggle-close button {
+  width: 40px;
+  background: var(--main-color);
+  border: none;
+  padding: 5px 0 0;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-toggle-close button i {
+  font-size: 25px;
+  color: whitesmoke;
+}
+
+/* CSS for Food SEarch Section */
+.food-search {
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+  padding: 7% 0;
+}
+
+.food-search input[type="search"] {
+  width: 50%;
+  padding: 1%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  text-align: right;
+  outline: none;
+}
+
+/* CSS for Categories */
+.categories {
+  padding: 4% 0;
+}
+
+.box-3 {
+  width: 28%;
+  float: right;
+  margin: 2%;
+}
+
+/* CSS for Food Menu */
+.food-menu {
+  background-color: #ececec;
+  padding: 4% 0;
+}
+
+.food-menu-box {
+  width: 43%;
+  margin: 1%;
+  padding: 2%;
+  float: right;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.food-menu-img {
+  width: 20%;
+  float: right;
+}
+
+.food-menu-desc {
+  width: 70%;
+  float: right;
+  margin-right: 8%;
+  text-align: right;
+}
+
+.food-price {
+  font-size: 1.2rem;
+  margin: 2% 0;
+}
+
+.food-detail {
+  font-size: 1rem;
+  color: #747d8c;
+}
+
+/* CSS for Social */
+
+.social ul {
+  list-style: none;
+}
+
+.social ul li {
+  display: inline;
+  padding: 1%;
+}
+
+/* for Order Section */
+
+.order {
+  width: 100%;
+  display: grid;
+  margin-top: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100%;
+}
+
+fieldset:nth-child(1) {
+  grid-column: span 4;
+  height: 200px;
+}
+
+fieldset:nth-child(2) {
+  grid-column: 6/12;
+}
+
+.input-responsive {
+  width: 96%;
+  padding: 2%;
+  margin-bottom: 3%;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.order-label {
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+
+/* CSS for Mobile Size or Smaller Screen */
+@media only screen and (max-width: 768px) {
+  .logo {
+    width: 80%;
+    float: none;
+    margin: 1% auto;
+  }
+
+  .menu {
+    position: absolute;
+    top: 4%;
+    right: 0;
+    width: 100%;
+  }
+
+  .menu ul {
+    text-align: center;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--main-color);
+    transition: display 0.3s;
+  }
+
+  .menu ul li a {
+    color: #fff;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .btn-toggle-open {
+    display: block;
+    margin-right: 20px;
+  }
+
+  .btn-toggle-close {
+    display: none;
+    margin-right: 20px;
+  }
+
+  .food-search input[type="search"] {
+    width: 60%;
+    padding: 1%;
+    margin-bottom: 3%;
+  }
+
+  .btn {
+    width: 20%;
+    padding: 2%;
+  }
+
+  .categories {
+    padding: 10% 0;
+  }
+
+  .left-line,
+  .right-line {
+    width: 30%;
+  }
+
+  h2 {
+    font-size: 13px;
+    margin-bottom: 5%;
+  }
+
+  .box-3 {
+    width: 90%;
+    margin: 2% auto;
+  }
+
+  .food-menu {
+    padding: 20% 0;
+  }
+
+  .food-menu-box {
+    width: 100%;
+    padding: 1%;
+    margin-bottom: 5%;
+  }
+
+  .food-menu-desc h4 {
+    font-size: 14px;
+  }
+
+  .food-menu-desc p {
+    font-size: 10px;
+  }
+
+  .food-menu-desc a {
+    font-size: 10px;
+  }
+
+  .social {
+    padding: 5% 0;
+  }
+
+  .order {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  fieldset:nth-child(1) {
+    grid-column: 1/12;
+    grid-row: span 1;
+  }
+
+  fieldset:nth-child(2) {
+    grid-column: 1/12;
+    grid-row: span 2;
+  }
+}

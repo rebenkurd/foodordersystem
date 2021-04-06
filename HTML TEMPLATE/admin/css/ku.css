@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "DroidKufi-Regular";
+  src: url("../fonts/DroidKufi-Regular/DroidKufi-Regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/DroidKufi-Regular/DroidKufi-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/DroidKufi-Regular/DroidKufi-Regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/DroidKufi-Regular/DroidKufi-Regular.woff") format("woff"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  direction: rtl;
+  font-family: "DroidKufi-Regular", "Helvetica";
+  font-size: 12px;
+}
+
+.bring_right {
+  float: right;
+}
+
+.bring_left {
+  float: left;
+}
+
+.right_text {
+  text-align: right;
+}
+
+.left_text {
+  text-align: left !important;
+}
+
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+  margin-right: -20px;
+}
+
+.checkbox-inline,
+.radio-inline {
+  padding-right: 20px;
+}
+
+.main_sidebar {
+  right: 0;
+}
+
+.main_container.main_menu_open {
+  margin-right: 350px;
+}
+
+.right_sidebar {
+  right: -350px !important;
+}
+
+.user_side_open {
+  margin-left: 300px;
+}
+
+.user_details {
+  left: 0;
+}
+
+.close_user_details {
+  left: -300px;
+}
+
+.home_pass ul li {
+  text-align: right !important;
+}
+
+.content_tabs_container > ul li {
+  float: right;
+}
+
+.main_sidebar_wrapper ul span {
+  margin: 0 0 0 10px;
+}
